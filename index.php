@@ -171,12 +171,14 @@ get_header();
             <div class="our_theme">
                 <p>免费主题分类</p>
                 <ul>
-                    <li><a href="#">科技</a></li>
-                    <li><a href="#">文化</a></li>
-                    <li><a href="#">教育</a></li>
-                    <li><a href="#">医疗</a></li>
-                    <li><a href="#">体育</a></li>
-                    <li><a href="#">商城</a></li>
+                    <?php
+                    $cat = get_category_by_slug('wpfree');
+                    wp_list_categories(array(
+                        'title_li'=>0,
+                        'hide_empty' => 0,
+                        'child_of' => $cat ->term_id,
+                    ));?>
+                    <?php get_terms('wpfree');?>
                 </ul>
             </div>
         </div>

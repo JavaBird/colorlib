@@ -24,6 +24,7 @@
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>js/html5shiv.min.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>js/respond.min.js"></script>
     <![endif]-->
+    <?php wp_head(); ?>
 </head>
 <body>
 <div class="topbar">
