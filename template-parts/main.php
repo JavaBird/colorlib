@@ -34,7 +34,7 @@
                     <li><i class="fa fa-comment-o fa-fw"></i> <?php the_comment();?> 评论</li>
                 </ul>
                 <div class="panel-desc">
-                        <?php the_excerpt();?>
+                      <p>  <?php the_excerpt();?> </p>
                                             <span>
                                                 <a href="<?php the_permalink();?>" class="button  button-pri button-small"><i class="fa fa-eye fa-fw"></i> 查看全部</a>
                                             </span>
