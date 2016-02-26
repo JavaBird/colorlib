@@ -21,14 +21,17 @@ get_header();
 <div class="col-md-9 col-sm-12">
     <div class="context">
 
-     <?php while ( have_posts() ) : the_post(); ?>
+     <?php while ( have_posts() ) : the_post();
+
+
+         ?>
 
         <h1><?php the_title();?></h1>
         <ul>
             <li><i class="fa fa-clock-o fa-fw"></i> <?php the_time('Y-m-d'); ?></li>
             <li><i class="fa fa-edit fa-fw" ></i> <?php the_author(); ?></li>
-            <li><i class="fa fa-link fa-fw" ></i> <?php post_custom("source"); ?></li>
-            <li><i class="fa fa-eye fa-fw" ></i> 255</li>
+            <li><i class="fa fa-link fa-fw" ></i> <?php $source= get_post_meta($post->ID, 'source', true); echo $source; ?></li>
+            <li><i class="fa fa-eye fa-fw" ></i> <?php the_views();?></li>
             <li><i class="fa fa-commenting-o fa-fw"></i> <?php the_comment(); ?> 评论</li>
         </ul>
         <div class="tag">

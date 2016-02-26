@@ -25,7 +25,7 @@
             </div>
             <div class="panel-content">
                 <div class="panel-title">
-                    <h2><a href="<?php ?>" title="<?php the_title(); ?>"><?php the_title();  ?></a></h2>
+                    <h2><a href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php the_title();  ?></a></h2>
                 </div>
                 <ul>
                     <li><i class="fa fa-clock-o fa-fw"></i> <?php the_time('Y-m-d');?></li>
