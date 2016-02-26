@@ -188,7 +188,7 @@ header .head-warp #left-menu {
   font-family: 'Tahoma', 'simsun' !important;
   font-size: 12px;
   line-height: 22px;
-  max-height: 50px;
+  max-height: 65px;
   overflow: hidden;
   text-overflow: ellipsis;
 }

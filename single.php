@@ -41,7 +41,7 @@ get_header();
         </div>
         <blockquote>
             <i class="fa fa-quote-left fa-2x"></i>
-            <?php the_excerpt();?><i class="fa fa-quote-right fa-2x"></i></blockquote>
+            <?php the_excerpt_embed(); ?><i class="fa fa-quote-right fa-2x"></i></blockquote>
         <?php the_content(); ?>
 
      <?php endwhile; // end of the loop. ?>
