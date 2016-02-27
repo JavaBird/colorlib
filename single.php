@@ -44,7 +44,7 @@ get_header();
         </div>
         <blockquote>
             <i class="fa fa-quote-left fa-2x"></i>
-            <?php the_excerpt_embed(); ?><i class="fa fa-quote-right fa-2x"></i></blockquote>
+            <?php echo get_the_excerpt(); ?><i class="fa fa-quote-right fa-2x"></i></blockquote>
         <?php the_content(); ?>
 
      <?php endwhile; // end of the loop. ?>
@@ -62,33 +62,9 @@ get_header();
             <li><a  href="#" target="_blank" title="分享到微博" class="douban"><i class="iconfont icon-douban01"></i></a></li>
         </ul>
     </div>
+    <?php related_posts();?>
 
-    <div class="recent_post">
-        <span>猜您喜欢的文章</span>
-        <div class="row">
-            <div class="col-md-4">
-                <a href="#"><img src="images/recent/best-fitness-wordpress-themes.jpg" ></a>
-                <div class="rece">
-                    <a href="#"><strong>20 +最好的WordPress健身主题2016健身房,健身中心和参考团体</strong></a>
-                    <p>列表的最佳响应WordPress健身主题设计和开发人员专门为健身房和健身…</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <a href="#"><img src="images/recent/top-latest-wordpress-themes.jpg"></a>
-                <div class="rece">
-                    <a href="#"><strong>20 +最好的WordPress健身主题2016健身房,健身中心和参考团体</strong></a>
-                    <p>列表的最佳响应WordPress健身主题设计和开发人员专门为健身房和健身…</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <a href="#"><img src="images/recent/yoga-wordpress-themes.jpg"></a>
-                <div class="rece">
-                    <a href="#"><strong>20 +最好的WordPress健身主题2016健身房,健身中心和参考团体</strong></a>
-                    <p>列表的最佳响应WordPress健身主题设计和开发人员专门为健身房和健身…</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 </div>
 <div class="col-md-3 col-sm-12">

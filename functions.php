@@ -34,7 +34,7 @@ function my_wp_trim_excerpt( $text = '' ) {
          *
          * @param int $number The number of words. Default 55.
          */
-        $excerpt_length = apply_filters( 'excerpt_length', 55 );
+        $excerpt_length = apply_filters( 'excerpt_length', 300 );
         /**
          * Filter the string in the "more" link displayed after a trimmed excerpt.
          *
@@ -69,7 +69,9 @@ function my_wp_trim_excerpt( $text = '' ) {
 
 add_filter("excerpt_length","colorlib_excerpt_length");
 
+
 add_filter("excerpt_more","colorlib_excerpt_more");
+
 
 add_filter( 'get_the_excerpt', 'my_wp_trim_excerpt'  );
 
