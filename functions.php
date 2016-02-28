@@ -76,6 +76,19 @@ add_filter("excerpt_more","colorlib_excerpt_more");
 add_filter( 'get_the_excerpt', 'my_wp_trim_excerpt'  );
 
 
+//显示来源
+function display_source($ID){
+
+    $source= get_post_meta($ID, 'source', true);
+
+    if($source == ''){
+        echo "<a href='".esc_url( home_url( '/' ) )."'>Colorlib中文网</a>";
+    }else{
+        echo $source;
+    }
+
+}
+
 
 
 

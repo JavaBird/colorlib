@@ -6,9 +6,9 @@ get_header();
         <div class="row">
             <div class="col-md-12">
                 <ul>
-                    <li><i class="fa fa-home fa-lg fa-fw"></i><a href="#">首页</a><i class="fa fa-angle-right"></i></li>
-                    <li><a href="#">WordPress主题</a><i class="fa fa-angle-right"></i></li>
-                    <li><a href="#">20个必看主题家里反对撒范德萨发</a></li>
+                    <li><i class="fa fa-home fa-lg fa-fw"></i><a href="<?php echo esc_url( home_url( '/' ) ); ?>">首页</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="#">aaaaaaaaa</a><i class="fa fa-angle-right"></i></li>
+                    <li><a ><?php the_title();?></a></li>
                 </ul>
             </div>
         </div>
@@ -30,7 +30,7 @@ get_header();
         <ul>
             <li><i class="fa fa-clock-o fa-fw"></i> <?php the_time('Y-m-d'); ?></li>
             <li><i class="fa fa-edit fa-fw" ></i> <?php the_author(); ?></li>
-            <li><i class="fa fa-link fa-fw" ></i> <?php $source= get_post_meta($post->ID, 'source', true); echo $source; ?></li>
+            <li><i class="fa fa-link fa-fw" ></i><?php display_source($post->ID);?> </li>
             <li><i class="fa fa-eye fa-fw" ></i> <?php the_views();?></li>
             <li><i class="fa fa-commenting-o fa-fw"></i> <?php the_comment(); ?> 评论</li>
         </ul>

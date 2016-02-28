@@ -36,7 +36,7 @@
     <div class="container">
         <div class="head-warp">
             <div class="logo">
-                <a href="#"><img class="img-responsive" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/colorlib-logo-top.png" ></a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="img-responsive" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/colorlib-logo-top.png" ></a>
                 <p >中文网</p>
             </div>
             <div id="nav" class="navbar">
