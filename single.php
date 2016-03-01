@@ -7,7 +7,7 @@ get_header();
             <div class="col-md-12">
                 <ul>
                     <li><i class="fa fa-home fa-lg fa-fw"></i><a href="<?php echo esc_url( home_url( '/' ) ); ?>">首页</a><i class="fa fa-angle-right"></i></li>
-                    <li><a href="#">aaaaaaaaa</a><i class="fa fa-angle-right"></i></li>
+                    <li><?php the_category(' ');?><i class="fa fa-angle-right"></i></li>
                     <li><a ><?php the_title();?></a></li>
                 </ul>
             </div>
@@ -35,6 +35,11 @@ get_header();
             <li><i class="fa fa-commenting-o fa-fw"></i> <?php the_comment(); ?> 评论</li>
         </ul>
         <div class="tag">
+            <?php the_tags(
+                '<ul>
+                <li><i class="fa fa-tags fa-lg fa-fw"></i> 标签：</li>',',',''
+
+            );?>
             <ul>
                 <li><i class="fa fa-tags fa-lg fa-fw"></i> 标签：</li>
                 <li><a href="#">马拉松</a></li>

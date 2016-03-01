@@ -89,7 +89,11 @@ function display_source($ID){
 
 }
 
+//获取当前文章分类
+function get_currpost_category($array){
 
+    echo  ''.$array[0];
+}
 
 
 
