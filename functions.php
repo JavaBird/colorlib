@@ -95,6 +95,34 @@ function get_currpost_category($array){
     echo  ''.$array[0];
 }
 
+// 获取当前文章标签
+function get_currpost_tags($post){
+
+    $tags =  get_the_tags();
+
+
+
+    if($tags){
+
+        $ul='<ul><li><i class="fa fa-tags fa-lg fa-fw"></i> 标签：</li>';
+
+        for($i = 0; $i < count($tags); $i ++){
+
+
+                $ul .='<li><a href="'.get_tag_link($tags[$i]->term_id).'">'.$tags[$i]->name.'</a></li>';
+
+        }
+        $ul .="</ul>";
+        echo $ul;
+    }
+
+
+
+
+}
+
+
+
 
 
 
