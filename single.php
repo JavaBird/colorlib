@@ -35,17 +35,14 @@ get_header();
             <li><i class="fa fa-commenting-o fa-fw"></i> <?php the_comment(); ?> 评论</li>
         </ul>
         <div class="tag">
-            <?php the_tags(
-                '<ul>
-                <li><i class="fa fa-tags fa-lg fa-fw"></i> 标签：</li>',',',''
 
-            );?>
-            <ul>
+            <?php get_currpost_tags($post);?>
+            <!--<ul>
                 <li><i class="fa fa-tags fa-lg fa-fw"></i> 标签：</li>
                 <li><a href="#">马拉松</a></li>
                 <li><a href="#">亚运会</a></li>
                 <li><a href="#">博客</a></li>
-            </ul>
+            </ul>-->
         </div>
         <blockquote>
             <i class="fa fa-quote-left fa-2x"></i>
