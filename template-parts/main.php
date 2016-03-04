@@ -31,7 +31,7 @@
                     <li><i class="fa fa-clock-o fa-fw"></i> <?php the_time('Y-m-d');?></li>
                     <li><i class="fa fa-user fa-fw" title="<?php the_author();?>"></i> <?php the_author();?></li>
                     <li><i class="fa fa-folder-o fa-fw" ></i> <?php  the_category(' ');?></li>
-                    <li><i class="fa fa-comment-o fa-fw"></i> <?php the_comment();?> 评论</li>
+                    <li><i class="fa fa-comment-o fa-fw"></i> <?php print_r(get_comments_number());?> 评论</li>
                 </ul>
                 <div class="panel-desc">
                       <p>  <?php the_excerpt_embed();?> </p>

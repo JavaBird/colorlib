@@ -32,7 +32,7 @@ get_header();
             <li><i class="fa fa-edit fa-fw" ></i> <?php the_author(); ?></li>
             <li><i class="fa fa-link fa-fw" ></i><?php display_source($post->ID);?> </li>
             <li><i class="fa fa-eye fa-fw" ></i> <?php the_views();?></li>
-            <li><i class="fa fa-commenting-o fa-fw"></i> <?php the_comment(); ?> 评论</li>
+            <li><i class="fa fa-commenting-o fa-fw"></i> <?php print_r(get_comments_number()); ?> 评论</li>
         </ul>
         <div class="tag">
 
