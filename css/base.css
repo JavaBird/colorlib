@@ -500,12 +500,15 @@ footer .copyright .container P {
 .comments-area .commentlist .comment .comment-body .comment-author img {
   position: absolute;
   left: 0px;
-  border-radius: 4px;
+  border-radius: 50%;
 }
 .comments-area .commentlist .comment .comment-body .comment-author .fn {
   color: #000;
   font-style: normal;
   margin-right: 5px;
+}
+.comments-area .commentlist .comment .comment-body .comment-author .says {
+  color: #999;
 }
 .comments-area .commentlist .comment .comment-body .comment-meta a {
   color: #999;
