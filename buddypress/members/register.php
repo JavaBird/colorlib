@@ -8,7 +8,7 @@
 
 ?>
 
-<div id="buddypress">
+<div id="buddypress" >
 
 	<?php
 
