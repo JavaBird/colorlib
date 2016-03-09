@@ -536,6 +536,13 @@ footer .copyright .container P {
 .comments-area .commentlist ul {
   list-style-type: none;
 }
+.forum-title {
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
 /*article_iconfont*/
 @font-face {
   font-family: "iconfont";

@@ -21,7 +21,7 @@
 
 	<?php endif; ?>
 
-	<?php bbp_breadcrumb(); ?>
+	<?php bbp_breadcrumb(array('home_text' => '首页',)); ?>
 
 	<?php bbp_forum_subscription_link(); ?>
 

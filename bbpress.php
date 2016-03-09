@@ -5,10 +5,9 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <ul>
-                        <li><i class="fa fa-home fa-lg fa-fw"></i><a href="<?php echo esc_url( home_url( '/' ) ); ?>">首页</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ><?php the_title();?></a></li>
-                    </ul>
+                    <p class="forum-title">
+                        <?php the_title(); ?>
+                    </p>
                 </div>
             </div>
         </div>
@@ -21,14 +20,11 @@ get_header();
 
                    <?php while ( have_posts() ) : the_post(); ?>
 
-                        <?php the_title(); ?>
                         <?php the_content();?>
                    
 
                    <?php endwhile;?>
-
-
-
+   
 
 
                 </div>
