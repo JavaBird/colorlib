@@ -3,7 +3,6 @@
 
 
 
-if ( function_exists( 'add_theme_support' ) )   add_theme_support( 'post-thumbnails' );// 开启缩略图
 
 remove_filter( 'the_excerpt', 'wpautop' );// 去掉文章摘要的<p>
 
@@ -102,8 +101,6 @@ function get_currpost_tags($post){
 
     $tags =  get_the_tags();
 
-
-
     if($tags){
 
         $ul='<ul><li><i class="fa fa-tags fa-lg fa-fw"></i> 标签：</li>';
@@ -118,57 +115,111 @@ function get_currpost_tags($post){
         echo $ul;
     }
 
-
-
-
 }
 
+if(! function_exists("colorlib_setup")):
 
-// Register the Cover Image feature for Users profiles
-function bp_default_register_feature() {
-    /**
-     * You can choose to register it for Members and / or Groups by including (or not)
-     * the corresponding components in your feature's settings. In this example, we
-     * chose to register it for both components.
-     */
-    $components = array( 'groups', 'xprofile');
-
-    // Define the feature's settings
-    $cover_image_settings = array(
-        'name'     => 'cover_image', // feature name
-        'settings' => array(
-            'components'   => $components,
-            'width'        => 940,
-            'height'       => 225,
-            'callback'     => 'bp_default_cover_image',
-            'theme_handle' => 'bp-default-main',
-        ),
-    );
+    function colorlib_setup(){
 
 
-    // Register the feature for your theme according to the defined settings.
-    bp_set_theme_compat_feature( bp_get_theme_compat_id(), $cover_image_settings );
-}
-add_action( 'bp_after_setup_theme', 'bp_default_register_feature' );
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support( 'automatic-feed-links' );
+
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support( 'title-tag' );
+
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+         */
+        add_theme_support( 'post-thumbnails' );
 
 
+        /*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+        add_theme_support( 'html5', array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ) );
 
-// Example of function to customize the display of the cover image
-function bp_default_cover_image( $params = array() ) {
-    if ( empty( $params ) ) {
-        return;
+
+        /*
+	 * Enable support for Post Formats.
+	 *
+	 * See: https://codex.wordpress.org/Post_Formats
+	 */
+        add_theme_support( 'post-formats', array(
+            'aside',
+            'image',
+            'video',
+            'quote',
+            'link',
+            'gallery',
+            'status',
+            'audio',
+            'chat',
+        ) );
+
+
+        add_theme_support('custom-header-uploads');
+
+
+        add_theme_support('custom-header');
+
     }
 
-    // The complete css rules are available here: https://gist.github.com/imath/7e936507857db56fa8da#file-bp-default-patch-L34
-    return '
-        /* Cover image */
-        #header-cover-image {
-            display: block;
-            height: ' . $params["height"] . 'px;
-            background-image: url(' . $params['cover_image'] . ');
-        }
-    ';
+
+endif;
+
+add_action( 'after_setup_theme', 'colorlib_setup' );
+
+
+/**
+ * Enqueues scripts and styles.
+ *
+ * @since Twenty Sixteen 1.0
+ */
+function colorlib_head_scripts(){
+
+
+  wp_enqueue_style('colorlib_responsive',get_template_directory_uri().'/css/responsive.css',array(),'1.0');
+  wp_enqueue_style('colorlib_font_awesome',get_template_directory_uri().'/css/font-awesome.css',array(),'1.0');
+  wp_enqueue_style('colorlib_sidr',get_template_directory_uri().'/css/jquery.sidr.dark.min.css',array(),'1.0');
+  wp_enqueue_style('colorlib_buttons',get_template_directory_uri().'/css/buttons.css',array(),'1.0');
+  wp_enqueue_style('colorlib_base',get_template_directory_uri().'/css/base.css',array(),'1.0');
+    // Load the html5 shiv.
+    wp_enqueue_script( 'colorlib-html5', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.2' );
+    wp_script_add_data( 'colorlib-html5', 'conditional', 'lt IE 9' );
+    wp_enqueue_script( 'colorlib-respond', get_template_directory_uri() . '/js/respond.min.js', array(), '1.4.2' );
+    wp_script_add_data( 'colorlib-respond', 'conditional', 'lt IE 9' );
+
 }
+add_action('wp_enqueue_scripts','colorlib_head_scripts',0);
+
+function colorlib_foot_scripts(){
+
+
+    wp_enqueue_script( 'colorlib-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.3' );
+    wp_enqueue_script( 'colorlib-sidr-js', get_template_directory_uri() . '/js/jquery.sidr.min.js', array(), '2.0.0' );
+    wp_enqueue_script( 'colorlib-stickUp-js', get_template_directory_uri() . '/js/stickUp.min.js');
+    wp_enqueue_script( 'colorlib-base-js', get_template_directory_uri() . '/js/colorlib.js', array(), '1.0' );
+
+}
+
+add_action('wp_footer','colorlib_foot_scripts',1);
+
+
 
 
 

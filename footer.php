@@ -18,9 +18,10 @@
     </div>
 </footer>
 </body>
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.min.js" ></script>
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.sidr.min.js" ></script>
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/stickUp.min.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/colorlib.js" ></script>
+<!--<script src="<?php /*echo esc_url( get_template_directory_uri() ); */?>/js/jquery.min.js" ></script>
+<script src="<?php /*echo esc_url( get_template_directory_uri() ); */?>/js/jquery.sidr.min.js" ></script>
+<script src="<?php /*echo esc_url( get_template_directory_uri() ); */?>/js/stickUp.min.js"></script>
+<script src="<?php /*echo esc_url( get_template_directory_uri() ); */?>/js/colorlib.js" ></script>-->
+
+<?php  wp_footer();?>
 </html>
