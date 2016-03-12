@@ -70,53 +70,14 @@ get_header();
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div class="download_theme">
-                <p>下载量排行榜</p>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="images/recomm/a2hosting-review-65x65.jpg" class="  img-responsive">
-                        </a>
-                        <a href="#">
-                            <p>2015年10个html5开发者必备文本编辑器</p>
-                        </a>
-                    </li> <li>
-                        <a href="#">
-                            <img src="images/recomm/colorlib_blog_image_retina_1024-65x65.png" class="img-responsive">
-                        </a>
-                        <a href="#">
-                            <p>2015年10个html5开发者必备文本编辑器</p>
-                        </a>
-                    </li> <li>
-                        <a href="#">
-                            <img src="images/recomm/free-wordpress-video-themes-65x65.jpg" class="img-responsive">
-                        </a>
-                        <a href="#">
-                            <p>2015年10个html5开发者必备文本编辑器</p>
-                        </a>
-                    </li> <li>
-                        <a href="#">
-                            <img src="images/recomm/Northeme-WordPress-Themes-65x65.jpg" class="img-responsive">
-                        </a>
-                        <a href="#">
-                            <p>2015年10个html5开发者必备文本编辑器</p>
-                        </a>
-                    </li> <li>
-                        <a href="#">
-                            <img src="images/recomm/pinbin-theme-instructions-65x65.jpg" class="img-responsive">
-                        </a>
-                        <a href="#">
-                            <p>2015年10个html5开发者必备文本编辑器</p>
-                        </a>
-                    </li> <li>
-                        <a href="#">
-                            <img src="images/recomm/SiteGround-Review-Discount-Codes-Feature-65x65.jpg" class="img-responsive">
-                        </a>
-                        <a href="#">
-                            <p>2015年10个html5开发者必备文本编辑器</p>
-                        </a>
-                    </li>
-                </ul>
+            <div class="most_views_posts">
+                <p>大家都在看</p>
+                <?php if (function_exists('get_most_viewed')): ?>
+                    <ul>
+                        <?php get_most_viewed('post'); ?>
+                    </ul>
+                <?php endif; ?>
+
             </div>
         </div>
 

@@ -4,7 +4,7 @@
  */
 
 ?>
-<footer>
+<footer id="bfooter">
     <div class="footer">
         <div class="container">
 

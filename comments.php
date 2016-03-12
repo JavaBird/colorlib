@@ -31,10 +31,20 @@ if ( post_password_required() ) {
 
     <?php if ( have_comments() ) : ?>
         <h2 class="comments-title">
+
+            <div>
+                <span><i class="fa fa-comments  fa-fw"></i></span> <span>
+                    <?php
+                               printf( _nx( '评论 （%1$s）', '评论 （%1$s）', get_comments_number(), 'comments title', 'colorlib' ),
+                                    number_format_i18n( get_comments_number() ) );
+                               ?>
+
+                </span>
+            </div>
             <?php
-            printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'colorlib' ),
+/*            printf( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'colorlib' ),
                 number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-            ?>
+            */?>
         </h2>
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>

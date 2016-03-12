@@ -7,7 +7,7 @@ get_header();
                 <div class="col-md-12">
                     <ul>
                         <li><i class="fa fa-home fa-lg fa-fw"></i><a href="<?php echo esc_url( home_url( '/' ) ); ?>">首页</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ><?php the_title();?></a></li>
+                        <li><?php the_title();?></li>
                     </ul>
                 </div>
             </div>

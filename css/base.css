@@ -237,6 +237,8 @@ header .head-warp #left-menu {
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 16px;
+  color: #1abc9c;
+  border-bottom: 1px solid #1abc9c;
 }
 .editor_recommend ul {
   list-style-type: none;
@@ -256,42 +258,47 @@ header .head-warp #left-menu {
 .our_theme p {
   font-weight: 600;
   font-size: 16px;
+  color: #e74c3c;
+  border-bottom: 1px solid #e74c3c;
 }
-.download_theme p {
+.most_views_posts > p {
   font-weight: 600;
   font-size: 16px;
+  color: #3498db;
+  border-bottom: 1px solid #3498db;
+  margin-bottom: 0px;
 }
-.download_theme ul {
+.most_views_posts ul {
   list-style-type: none;
   padding-left: 0px;
 }
-.download_theme ul li:first-child {
-  border-top: 1px solid #eee;
-}
-.download_theme ul li {
+.most_views_posts ul li {
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #eee;
   display: inline-block;
   width: 100%;
 }
-.download_theme ul li a:first-child {
+.most_views_posts ul li a:first-child {
   overflow: hidden;
 }
-.download_theme ul li a:first-child img {
+.most_views_posts ul li a:first-child img {
+  width: 65px;
+  height: 65px;
   float: left;
   transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
   transition: transform 1s;
   -webkit-transition: transform 1s;
 }
-.download_theme ul li a:first-child img:hover {
+.most_views_posts ul li a:first-child img:hover {
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   transition: transform 1s;
   -webkit-transition: transform 1s;
 }
-.download_theme ul li a:last-child p {
+.most_views_posts ul li a:last-child p {
+  color: #777;
   margin: 0;
   font-size: 12px;
   padding-left: 15px;
@@ -299,20 +306,20 @@ header .head-warp #left-menu {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-footer {
+#bfooter {
   margin-top: 20px;
 }
-footer .footer {
+#bfooter .footer {
   display: block;
   height: 200px;
   background-color: #262626;
   color: #777;
 }
-footer .copyright {
+#bfooter .copyright {
   background-color: #222;
   color: #999;
 }
-footer .copyright .container P {
+#bfooter .copyright .container P {
   margin: 0 auto;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -501,11 +508,31 @@ footer .copyright .container P {
   position: absolute;
   left: 0px;
   border-radius: 50%;
+  cursor: pointer ;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+}
+.comments-area .commentlist .comment .comment-body .comment-author img:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
 }
 .comments-area .commentlist .comment .comment-body .comment-author .fn {
   color: #000;
   font-style: normal;
   margin-right: 5px;
+}
+.comments-area .commentlist .comment .comment-body .comment-author .fn a {
+  transition: color 1s;
+  -webkit-transition: color 1s;
+}
+.comments-area .commentlist .comment .comment-body .comment-author .fn a:hover {
+  color: #e74c3c !important;
+  transition: color 1s;
+  -webkit-transition: color 1s;
 }
 .comments-area .commentlist .comment .comment-body .comment-author .says {
   color: #999;
@@ -605,13 +632,140 @@ footer .copyright .container P {
 .breadcrumb-col ul li i:last-child {
   color: #999;
 }
+#comments .comments-title div span:first-child {
+  display: inline-block;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: #3498db;
+  border-radius: 3px;
+}
+#comments .comments-title div span:first-child i {
+  color: #fff;
+}
+#comments .comments-title div span:last-child {
+  font-size: 16px;
+}
+#comments input[type=url],
+#comments input[type=password],
+#comments input[type=search],
+#comments input[type=text],
+#comments input[type=email],
+#comments input[type=tel],
+#comments textarea {
+  color: #777;
+  padding: .6em;
+  display: inline-block;
+  font-size: 1em;
+  transition: .15s linear border;
+  -webkit-appearance: none;
+  max-width: 100%;
+  border: 1px solid #e4e4e4;
+  background: #f7f7f7;
+  font-family: inherit;
+}
+#comments input[type=url]:focus,
+#comments input[type=password]:focus,
+#comments input[type=search]:focus,
+#comments input[type=text]:focus,
+#comments input[type=email]:focus,
+#comments input[type=tel]:focus,
+#comments textarea:focus {
+  outline: 0;
+  background-color: #f9f9f9;
+}
+#comments #respond .comment-form label {
+  color: #686868;
+  display: block;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.076923077em;
+  line-height: 1.6153846154;
+  margin-bottom: 0.5384615385em;
+  text-transform: uppercase;
+}
+#comments #respond input[type=url],
+#comments #respond input[type=email],
+#comments #respond input[type=text] {
+  width: 50%;
+}
+#comments #respond #comment {
+  width: 100%;
+}
+#comments #respond .comment-list .comment-form {
+  padding-bottom: 1.75em;
+}
+#comments #respond .comment-notes,
+#comments #respond .comment-awaiting-moderation,
+#comments #respond .logged-in-as,
+#comments #respond .form-allowed-tags {
+  color: #686868;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
+}
+#comments #respond .no-comments {
+  border-top: 1px solid #d1d1d1;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 1.75em;
+}
+#comments #respond .comment-navigation + .no-comments {
+  border-top: 0;
+  padding-top: 0;
+}
+#comments #respond .form-allowed-tags code {
+  font-family: Inconsolata, monospace;
+}
+#comments #respond .form-submit {
+  margin-bottom: 0;
+}
+#comments #respond .form-submit .submit {
+  color: #fff;
+  border: 0px;
+  background-color: #E9573F;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 3px;
+}
+#comments #respond .form-submit .submit:hover {
+  background-color: #FC6E51;
+}
+#comments #respond .required {
+  color: #e74c3c;
+  font-family: Merriweather, Georgia, serif;
+}
+#comments #respond .comment-reply-title small {
+  font-size: 100%;
+}
+#comments #respond .comment-reply-title small a {
+  border: 0;
+  float: right;
+  height: 32px;
+  overflow: hidden;
+  width: 26px;
+}
+#comments #respond .comment-reply-title small a:hover,
+#comments #respond .comment-reply-title small a:focus {
+  color: #1a1a1a;
+}
+#comments #respond .comment-reply-title small a:before {
+  content: "\f405";
+  font-size: 32px;
+  position: relative;
+  top: -5px;
+}
 /*button*/
 .button-pri {
   background-color: #4a97c2;
   color: #fff !important;
   border-radius: 4px;
 }
-.button-pri:hover {
+.button-pri:hover,
+.button-pri:focus {
   background-color: #3b86b0;
   border-radius: 4px;
 }
