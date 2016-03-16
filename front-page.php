@@ -13,40 +13,17 @@ get_header();
 <div class="col-md-3 col-sm-12">
     <div class="row">
         <div class="col-md-12">
-            <div class="follow">
-                <p>关注我们</p>
-                <ul>
-                    <li><a href="#" class="weixin">
-                            <i class="fa fa-weixin fa-2x"></i>
-                        </a></li>
-                    <li><a href="#" class="weibo">
-                            <i class="fa fa-weibo fa-2x"></i>
-                        </a></li>
-                    <li><a href="#" class="rss">
-                            <i class="fa fa-rss fa-2x"></i>
-                        </a></li>
-                </ul>
-            </div>
+
+            <?php get_template_part("template-parts/context_follow_me")?>
+
+
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <!--编辑推荐-->
-            <div class="editor_recommend">
-                <p>编辑推荐</p>
-                <ul>
-                    <li>
-                        <a href="#"><img class="img-responsive " src="http://localhost/wordpress/wp-content/uploads/2016/03/theblogstarter-on-colorlib.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img class="img-responsive" src="http://localhost/wordpress/wp-content/uploads/2016/03/themeisle-colorlib.png"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img class="img-responsive" src="images/ad/themeisle-colorlib.png"></a>
-                    </li>
+            <?php get_template_part("template-parts/context_editor_recommend")?>
 
-                </ul>
-            </div>
         </div>
 
     </div>
