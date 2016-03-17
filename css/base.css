@@ -620,10 +620,8 @@ header .head-warp #left-menu {
 }
 .breadcrumb-col ul li {
   display: inline;
-  margin-right: 5px;
 }
 .breadcrumb-col ul li a {
-  margin-right: 10px;
   font-size: 1em;
 }
 .breadcrumb-col ul li i:first-child {
@@ -631,6 +629,10 @@ header .head-warp #left-menu {
 }
 .breadcrumb-col ul li i:last-child {
   color: #999;
+}
+.breadcrumb-col ul i {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 #comments .comments-title div span:first-child {
   display: inline-block;

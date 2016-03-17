@@ -1,6 +1,23 @@
 <?php
 get_header();
 ?>
+
+<div class="breadcrumb-col">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <?php if(function_exists('bcn_display'))
+                    {
+                        bcn_display();
+                    }?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!--main-->
 <div class="main">
     <div class="container">
