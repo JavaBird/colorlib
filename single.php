@@ -6,9 +6,10 @@ get_header();
         <div class="row">
             <div class="col-md-12">
                 <ul>
-                    <li><i class="fa fa-home fa-lg fa-fw"></i><a href="<?php echo esc_url( home_url( '/' ) ); ?>">首页</a><i class="fa fa-angle-right"></i></li>
-                    <li><?php the_category(' ');?><i class="fa fa-angle-right"></i></li>
-                    <li><a ><?php the_title();?></a></li>
+                    <?php if(function_exists('bcn_display'))
+                    {
+                        bcn_display();
+                    }?>
                 </ul>
             </div>
         </div>
